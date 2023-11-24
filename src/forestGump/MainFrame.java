@@ -16,7 +16,9 @@ public class MainFrame extends JFrame {
         int newY = random.nextInt(0, parent.getHeight() - component.getHeight());
         component.setLocation(newX, newY);
         if((newX <= stuckSpace || newX+component.getWidth() >= parent.getWidth()-stuckSpace) ||
-            newY <= stuckSpace || newY+component.getHeight() >= parent.getHeight()-stuckSpace) stuck = true;
+            newY <= stuckSpace || newY+component.getHeight() >= parent.getHeight()-stuckSpace) {
+            stuck = true;
+        }
     }
     private JPanel mainPanel = new JPanel();
     private JButton runningButton = new JButton("ZOSTAW MNIE!!!");
